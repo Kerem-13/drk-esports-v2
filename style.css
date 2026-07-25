@@ -1,0 +1,792 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+
+body{
+
+    background:#050505;
+    color:white;
+
+}
+
+
+/* HEADER */
+
+header{
+
+    width:100%;
+    height:80px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 8%;
+
+    background:#090909;
+    border-bottom:1px solid #1f1f1f;
+
+}
+
+
+.logo{
+
+    font-size:32px;
+    font-weight:800;
+    color:white;
+
+}
+
+
+.logo span{
+
+    color:#e00000;
+
+}
+
+
+nav{
+
+    display:flex;
+    gap:30px;
+
+}
+
+
+nav a{
+
+    color:white;
+    text-decoration:none;
+    font-size:16px;
+    transition:.3s;
+
+}
+
+
+nav a:hover{
+
+    color:#e00000;
+
+}
+
+
+
+.loginBtn{
+
+    background:#e00000;
+    padding:12px 25px;
+    border-radius:8px;
+
+    color:white;
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+
+.loginBtn:hover{
+
+    background:#ff1a1a;
+
+}
+
+
+
+/* HERO */
+
+
+.hero{
+
+    min-height:600px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:60px 8%;
+
+    background:
+
+    radial-gradient(circle at top right,#650000,transparent 35%);
+
+}
+
+
+
+.heroLeft{
+
+    max-width:600px;
+
+}
+
+
+
+.heroLeft h1{
+
+    font-size:65px;
+    line-height:1.1;
+
+}
+
+
+.heroLeft h1 span{
+
+    color:#e00000;
+
+}
+
+
+
+.heroLeft p{
+
+    margin-top:25px;
+
+    color:#aaa;
+
+    font-size:18px;
+
+    line-height:1.6;
+
+}
+
+
+
+.heroLeft button{
+
+    margin-top:35px;
+
+    padding:16px 35px;
+
+    background:#e00000;
+
+    border:none;
+
+    color:white;
+
+    font-size:18px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+.heroLeft button:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 25px #e00000;
+
+}
+
+
+
+.heroRight img{
+
+    width:500px;
+
+}
+
+
+
+/* KATEGORİLER */
+
+
+.categories{
+
+    padding:70px 8%;
+
+}
+
+
+
+.categories h2{
+
+    text-align:center;
+
+    font-size:40px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.categoryGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+
+
+.card{
+
+    background:#111;
+
+    border:1px solid #222;
+
+    padding:40px;
+
+    text-align:center;
+
+    border-radius:15px;
+
+    font-size:45px;
+
+    transition:.3s;
+
+}
+
+
+
+.card h3{
+
+    margin-top:15px;
+
+    font-size:22px;
+
+}
+
+
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#e00000;
+
+    box-shadow:0 0 25px #550000;
+
+}
+
+
+
+/* MOBİL */
+
+
+@media(max-width:900px){
+
+
+.hero{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+
+.heroRight img{
+
+    width:300px;
+
+}
+
+
+
+.categoryGrid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+nav{
+
+    display:none;
+
+}
+
+
+}
+.featured{
+
+    padding:70px 8%;
+
+}
+
+
+.featured h2{
+
+    text-align:center;
+
+    font-size:40px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.productGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+
+
+.productCard{
+
+    background:#111;
+
+    padding:35px;
+
+    border-radius:15px;
+
+    border:1px solid #222;
+
+    transition:.3s;
+
+}
+
+
+
+.productCard:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#e00000;
+
+}
+
+
+
+.productCard button{
+
+    margin-top:20px;
+
+    background:#e00000;
+
+    color:white;
+
+    border:0;
+
+    padding:12px 25px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+
+
+
+footer{
+
+    background:#080808;
+
+    text-align:center;
+
+    padding:40px;
+
+    border-top:1px solid #222;
+
+}
+
+
+@media(max-width:900px){
+
+.productGrid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* DRK GAMING EFFECTS */
+
+
+.hero{
+
+    position:relative;
+    overflow:hidden;
+
+}
+
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:400px;
+    height:400px;
+
+    background:#e00000;
+
+    filter:blur(150px);
+
+    opacity:.25;
+
+    right:0;
+    top:50px;
+
+}
+
+
+
+.logo{
+
+    text-shadow:0 0 15px #e00000;
+
+}
+
+
+
+.productCard{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.productCard::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:100%;
+    height:3px;
+
+    background:#e00000;
+
+    top:0;
+    left:-100%;
+
+    transition:.4s;
+
+}
+
+
+
+.productCard:hover::before{
+
+    left:0;
+
+}
+
+
+
+.card{
+
+    cursor:pointer;
+
+}
+
+
+
+.heroLeft button{
+
+    box-shadow:0 0 20px rgba(224,0,0,.5);
+
+}
+
+
+
+.loginBtn{
+
+    box-shadow:0 0 15px rgba(224,0,0,.5);
+
+}
+
+
+
+/* YUMUŞAK ANİMASYON */
+
+.heroLeft{
+
+    animation:slideLeft 1s;
+
+}
+
+
+.heroRight{
+
+    animation:slideRight 1s;
+
+}
+
+
+
+@keyframes slideLeft{
+
+
+from{
+
+transform:translateX(-50px);
+
+opacity:0;
+
+}
+
+
+to{
+
+transform:translateX(0);
+
+opacity:1;
+
+}
+
+}
+
+
+
+@keyframes slideRight{
+
+
+from{
+
+transform:translateX(50px);
+
+opacity:0;
+
+}
+
+
+to{
+
+transform:translateX(0);
+
+opacity:1;
+
+}
+
+}
+.productCard img{
+
+    width:100%;
+
+    height:200px;
+
+    object-fit:contain;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.products{
+
+    padding:60px 8%;
+
+}
+
+
+
+.products h1{
+
+    text-align:center;
+
+    font-size:45px;
+
+    margin-bottom:40px;
+
+}
+
+
+.productCard strong{
+
+    color:#e00000;
+
+    font-size:20px;
+
+}
+.filters{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    margin-bottom:40px;
+
+}
+
+
+.filters input,
+.filters select{
+
+
+    background:#111;
+
+    color:white;
+
+    border:1px solid #333;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+}
+
+
+
+.filters input:focus,
+.filters select:focus{
+
+    border-color:#e00000;
+
+    outline:none;
+
+}
+
+
+
+@media(max-width:700px){
+
+
+.filters{
+
+    flex-direction:column;
+
+}
+
+
+}
+.cartTotal{
+
+margin-top:40px;
+
+text-align:center;
+
+}
+
+.cartTotal h2{
+
+margin-bottom:20px;
+
+font-size:35px;
+
+color:#e00000;
+
+}
+
+#odemeBtn{
+
+padding:15px 40px;
+
+border:none;
+
+border-radius:10px;
+
+background:#e00000;
+
+color:white;
+
+font-size:18px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+#odemeBtn:hover{
+
+transform:scale(1.05);
+
+box-shadow:0 0 20px #e00000;
+
+}
+
+.toast{
+
+position:fixed;
+
+right:30px;
+bottom:30px;
+
+background:#0f9d58;
+
+color:white;
+
+padding:15px 25px;
+
+border-radius:10px;
+
+font-weight:600;
+
+opacity:0;
+
+transform:translateY(30px);
+
+transition:.4s;
+
+z-index:9999;
+
+}
+
+.toast.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+.indirim{
+background:red;
+color:white;
+padding:5px 10px;
+border-radius:8px;
+display:inline-block;
+margin-bottom:10px;
+font-size:12px;
+font-weight:bold;
+}
+
+@media (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .productGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .productCard {
+        width: 90%;
+        margin: auto;
+    }
+
+    input, select, button {
+        width: 90%;
+        max-width: 350px;
+    }
+
+}

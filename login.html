@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" href="logo.png">
+
+<title>DRK Esports - Giriş Yap</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+DRK <span>ESPORTS</span>
+</div>
+
+</header>
+
+
+
+<section class="auth">
+
+<h2>Giriş Yap</h2>
+
+
+<input type="email" placeholder="E-posta">
+
+
+<input type="password" placeholder="Şifre">
+
+
+<p id="mesaj"></p>
+
+<button id="girisBtn">
+Giriş Yap
+</button>
+
+
+<p>
+Hesabın yok mu?
+<a href="register.html">Kayıt Ol</a>
+</p>
+
+
+</section>
+
+
+
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+import { 
+    getAuth,
+    signInWithEmailAndPassword,
+    createUserWithEmailAndPassword
+} from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAGoFZKX3qnqTDwQSenszstEKPHalqln8M",
+  authDomain: "drk-esports.firebaseapp.com",
+  projectId: "drk-esports",
+  storageBucket: "drk-esports.firebasestorage.app",
+  messagingSenderId: "11142202479",
+  appId: "1:11142202479:web:c7fe4c7c4c1ab98259b99a"
+};
+
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+
+window.giris = async () => {
+
+    let email = document.querySelectorAll("input")[0].value;
+    let sifre = document.querySelectorAll("input")[1].value;
+
+
+    try {
+
+        let sonuc = await signInWithEmailAndPassword(
+            auth,
+            email,
+            sifre
+        );
+
+
+        localStorage.setItem(
+            "kullanici",
+            JSON.stringify({
+                email: sonuc.user.email
+            })
+        );
+
+
+        window.location.href="profile.html";
+
+
+    } catch(error){
+
+        document.getElementById("mesaj").innerHTML =
+        "Giriş başarısız: " + error.message;
+
+    }
+
+}
+
+document.getElementById("girisBtn").addEventListener("click", giris);
+
+</script>
+
+
+
+
+</body>
+
+
+</html>

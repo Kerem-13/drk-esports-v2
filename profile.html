@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" href="logo.png">
+
+<title>DRK Esports - Profil</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+DRK <span>ESPORTS</span>
+</div>
+
+<nav>
+
+<a href="favorites.html">Favoriler</a>
+
+<a href="index.html">Ana Sayfa</a>
+<a href="products.html">Ürünler</a>
+
+</nav>
+
+</header>
+
+
+<section class="auth">
+
+<h2>Profilim</h2>
+
+<img id="profilFoto" src="https://via.placeholder.com/120" width="120" height="120" style="border-radius:50%;"><br><br>
+
+<input type="file" id="fotoSec" accept="image/*">
+<button onclick="fotoKaydet()">Fotoğrafı Kaydet</button>
+
+<h2 id="isim"></h2>
+<p id="email"></p>
+
+<h3 id="kullaniciAdi"></h3>
+
+<p id="eposta"></p>
+
+<br>
+
+<button onclick="window.location.href='products.html'">
+Ürünlere Git
+</button>
+
+<br><br>
+
+<button onclick="cikisYap()">
+Çıkış Yap
+</button>
+
+</section>
+
+let foto = localStorage.getItem("profilFoto");
+
+if (foto) {
+    document.getElementById("profilFoto").src = foto;
+}
+
+function fotoKaydet() {
+    let dosya = document.getElementById("fotoSec").files[0];
+
+    if (!dosya) return;
+
+    let reader = new FileReader();
+
+    reader.onload = function(e) {
+        localStorage.setItem("profilFoto", e.target.result);
+        document.getElementById("profilFoto").src = e.target.result;
+    }
+
+    reader.readAsDataURL(dosya);
+}
+
+
+<script>
+
+
+
+
+
+if(kullanici){
+
+    document.getElementById("kullaniciAdi").innerHTML =
+    "👤 " + kullanici.kullanici;
+
+    document.getElementById("eposta").innerHTML =
+    "📧 " + kullanici.email;
+
+}else{
+
+    window.location.href="login.html";
+
+}
+
+
+
+
+
+
+
+<button onclick="cikis()">Çıkış Yap</button>
+
+function cikis() {
+    localStorage.removeItem("kullanici");
+    window.location.href = "login.html";
+}
+
+
+let kullanici = JSON.parse(localStorage.getItem("kullanici"))
+
+
+
+if (!kullanici) {
+    window.location.href = "login.html";
+} else {
+    document.getElementById("isim").innerText = kullanici.isim;
+    document.getElementById("email").innerText = kullanici.email;
+}
+</script>
+
+</body>
+</html>

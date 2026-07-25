@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" href="logo.png">
+
+<title>DRK Esports - Kayıt Ol</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+DRK <span>ESPORTS</span>
+</div>
+
+</header>
+
+
+
+<section class="auth">
+
+<h2>Kayıt Ol</h2>
+
+
+<input type="text" placeholder="Ad">
+
+<input type="text" placeholder="Soyad">
+
+<input type="text" placeholder="Kullanıcı Adı">
+
+<input type="email" placeholder="E-posta">
+
+<input type="password" placeholder="Şifre">
+
+<p id="mesaj"></p>
+<button onclick="kayit()">
+Kayıt Ol
+</button>
+
+
+<p>
+Zaten hesabın var mı?
+<a href="login.html">Giriş Yap</a>
+</p>
+
+
+</section>
+
+
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+
+import {
+getAuth,
+createUserWithEmailAndPassword
+} from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAGoFZKX3qnqTDwQSenszstEKPHalqln8M",
+  authDomain: "drk-esports.firebaseapp.com",
+  projectId: "drk-esports",
+  storageBucket: "drk-esports.firebasestorage.app",
+  messagingSenderId: "11142202479",
+  appId: "1:11142202479:web:c7fe4c7c4c1ab98259b99a"
+};
+
+
+const app = initializeApp(firebaseConfig);
+
+const auth = getAuth(app);
+
+
+window.kayit = async function(){
+
+let email = document.querySelectorAll("input")[3].value;
+let sifre = document.querySelectorAll("input")[4].value;
+
+
+try{
+
+await createUserWithEmailAndPassword(
+    auth,
+    email,
+    sifre
+);
+
+
+document.getElementById("mesaj").innerHTML =
+"Kayıt başarılı! Giriş yapabilirsiniz.";
+
+
+setTimeout(()=>{
+
+window.location.href="login.html";
+
+},1500);
+
+
+}catch(error){
+
+document.getElementById("mesaj").innerHTML =
+error.message;
+
+}
+
+}
+
+</script>
+
+
+</body>
+
+</html>

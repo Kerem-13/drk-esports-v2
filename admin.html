@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+
+<link rel="icon" href="logo.png">
+
+<title>Admin Paneli</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>⚙️ Admin Paneli</h1>
+
+<a href="products.html">⬅ Ürünlere Dön</a>
+<br><br>
+
+<input id="isim" placeholder="Ürün adı"><br><br>
+
+<input id="marka" placeholder="Marka"><br><br>
+
+<input id="kategori" placeholder="Kategori"><br><br>
+
+<input id="fiyat" placeholder="Fiyat"><br><br>
+
+<input id="resim" placeholder="Resim linki"><br><br>
+
+<input id="link" placeholder="Satın alma linki"><br><br>
+
+<button onclick="urunEkle()">Ürün Ekle</button>
+
+
+<script>
+let kullanici = JSON.parse(localStorage.getItem("kullanici"));
+
+if (!kullanici || kullanici.email !== "admin@drk.com") {
+    alert("Bu sayfaya erişim yetkiniz yok!");
+    window.location.href = "index.html";
+}
+</script>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

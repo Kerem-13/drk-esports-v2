@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" href="logo.png">
+
+<title>DRK Esports | Ürünler</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+DRK <span>ESPORTS</span>
+</div>
+
+
+<nav>
+
+<a href="favorites.html">Favoriler</a>
+
+<a href="index.html">Ana Sayfa</a>
+
+<a href="products.html">Ürünler</a>
+
+<a href="login.html">Giriş</a>
+
+</nav>
+
+
+</header>
+
+
+
+<section class="products">
+
+
+<h1>
+Tüm Ürünler
+</h1>
+
+<p id="urunSayisi"></p>
+
+<div class="filters">
+
+<input 
+id="arama"
+placeholder="Ürün ara..."
+>
+
+
+<select id="kategori">
+
+<select id="siralama">
+    <option value="normal">Varsayılan</option>
+    <option value="az">A-Z</option>
+    <option value="za">Z-A</option>
+</select>
+
+
+<option value="Hepsi">
+Tüm Kategoriler
+</option>
+
+<option value="Mouse">
+Mouse
+</option>
+
+<option value="Kulaklık">
+Kulaklık
+</option>
+
+<option value="Klavye">
+Klavye
+</option>
+
+<option value="Mousepad">
+Mousepad
+</option>
+
+</select>
+
+
+</div>
+
+<div id="productList" class="productGrid">
+
+</div>
+
+
+</section>
+
+
+
+<script src="script.js"></script>
+
+<div id="toast" class="toast">
+✅ Ürün sepete eklendi
+</div>
+
+</body>
+
+</html>

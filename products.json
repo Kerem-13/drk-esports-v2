@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "isim": "Logitech G Pro X Superlight 2",
+    "marka": "Logitech",
+    "kategori": "Mouse",
+    "fiyat": "4999 TL",
+    "puan": "5.0",
+    "resim": "https://resource.logitechg.com/w_692,c_limit,q_auto,f_auto,dpr_auto/content/dam/gaming/en/products/pro-x2-superlight/pro-x2-superlight-white-gallery-1.png",
+    "link": "https://www.logitechg.com"
+  },
+  {
+    "id": 2,
+    "isim": "Razer DeathAdder V3 Pro",
+    "marka": "Razer",
+    "kategori": "Mouse",
+    "fiyat": "3999 TL",
+    "puan": "4.9",
+    "resim": "https://assets3.razerzone.com/9VnJk8kZ1Qnq8fM8rQ1mQf",
+    "link": "https://www.razer.com"
+  },
+  {
+    "id": 3,
+    "isim": "SteelSeries Apex Pro Mini",
+    "marka": "SteelSeries",
+    "kategori": "Klavye",
+    "fiyat": "6999 TL",
+    "puan": "5.0",
+    "resim": "https://steelseries.com",
+    "link": "https://steelseries.com"
+  },
+  {
+    "id": 4,
+    "isim": "Wooting 60HE+",
+    "marka": "Wooting",
+    "kategori": "Klavye",
+    "fiyat": "7500 TL",
+    "puan": "5.0",
+    "resim": "https://wooting.io",
+    "link": "https://wooting.io"
+  },
+  {
+    "id": 5,
+    "isim": "HyperX Cloud III",
+    "marka": "HyperX",
+    "kategori": "Kulaklık",
+    "fiyat": "3299 TL",
+    "puan": "4.8",
+    "resim": "https://hyperx.com",
+    "link": "https://hyperx.com"
+  },
+  {
+    "id": 6,
+    "isim": "Razer BlackShark V2 Pro",
+    "marka": "Razer",
+    "kategori": "Kulaklık",
+    "fiyat": "5999 TL",
+    "puan": "4.9",
+    "resim": "https://razer.com",
+    "link": "https://razer.com"
+  },
+  {
+    "id": 7,
+    "isim": "SteelSeries QcK Heavy",
+    "marka": "SteelSeries",
+    "kategori": "Mousepad",
+    "fiyat": "999 TL",
+    "puan": "4.8",
+    "resim": "https://steelseries.com",
+    "link": "https://steelseries.com"
+  },
+  {
+    "id": 8,
+    "isim": "Zowie G-SR-SE Mousepad",
+    "marka": "Zowie",
+    "kategori": "Mousepad",
+    "fiyat": "1499 TL",
+    "puan": "4.9",
+    "resim": "https://zowie.benq.com",
+    "link": "https://zowie.benq.com"
+  }
+]
