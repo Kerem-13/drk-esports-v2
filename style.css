@@ -815,3 +815,8 @@ nav{
     pointer-events: none;
 }
     
+
+.hero,
+.hero::before{
+    pointer-events:none !important;
+}
