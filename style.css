@@ -10,6 +10,7 @@ body{
 
     background:#050505;
     color:white;
+overflow-x:hidden;
 
 }
 
@@ -17,9 +18,10 @@ body{
 /* HEADER */
 
 header{
-
     width:100%;
-    height:80px;
+    min-height:80px;
+    position:relative;
+    z-index:1000;
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -302,11 +304,12 @@ nav a:hover{
     }
 
     nav{
-        display:flex;
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:15px;
-    }
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+}
 }
 
 
@@ -416,14 +419,14 @@ grid-template-columns:1fr;
 
 
 .hero{
-
     position:relative;
     overflow:hidden;
-
+    z-index:1;
 }
 
 
 .hero::before{
+    pointer-events:none;
 
     content:"";
 
@@ -792,4 +795,23 @@ font-weight:bold;
     }
 
     }
+
+
+    header{
+    position: relative;
+    z-index: 9999;
+}
+
+nav{
+    position: relative;
+    z-index: 9999;
+}
+
+.hero{
+    z-index: 1;
+}
+
+.hero::before{
+    pointer-events: none;
+}
     
