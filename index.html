@@ -311,6 +311,33 @@ Profesyonel gaming ekipmanları
 <script src="script.js"></script>
 
 
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAGoFZKX3qnqTDwQSenszstEKPHalqln8M",
+  authDomain: "drk-esports.firebaseapp.com",
+  projectId: "drk-esports",
+  storageBucket: "drk-esports.firebasestorage.app",
+  messagingSenderId: "11142202479",
+  appId: "1:11142202479:web:c7fe4c7c4c1ab98259b99a"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+onAuthStateChanged(auth, (user) => {
+  const headerButtons = document.querySelector(".header-buttons");
+  if (user) {
+    headerButtons.innerHTML = `<a href="profile.html" class="loginBtn">Profil</a>`;
+  } else {
+    headerButtons.innerHTML = `<a href="login.html" class="loginBtn">Giriş Yap</a>`;
+  }
+});
+</script>
+
+
 </body>
 
 </body>
